@@ -580,7 +580,7 @@ const fetchUserLPData = async (_token, _userAddress) => {
         const data = {
             USER: {
                 poolStakedAmount: poolTotalStaked,
-                userStakedAmount: stakedAmount,
+                stakedAmount: stakedAmount,
                 allowance: allowance,
                 userLPRatio: userLPRatio,
                 userStakedValue: userStakedValue,
