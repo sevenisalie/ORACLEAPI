@@ -2,6 +2,7 @@
   "name": "ORACLEAPI",
   "scripts": {
     "test": "echo \"no test specced\" && exit 1",
+    "postinstall": "npm run build",
     "start": "node index.js"
   },
   "version": "1.0.0",
