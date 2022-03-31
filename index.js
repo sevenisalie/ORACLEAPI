@@ -62,7 +62,10 @@ app.use("/poolData", poolDataRouter)
 //run it
 const port = 8090 //for local
 
-const PORT = process.env.PORT || 3000 //for prod
+const PORT = process.env.PORT || 8090 //for prod
+const HOST = process.env.PORT ? "0.0.0.0" : "localhost"
+console.log(HOST)
+
 
 
 app.listen(
