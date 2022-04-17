@@ -45,7 +45,9 @@ const fetchContract = async (address, abi) => {
 const fetchBestLP = async (_token) => {
     try {
         const data = await fetchTokenLiquidityInfo(_token)
-    const nativeTokenLiquidity = data.map( (pool) => {
+        console.log("DARATA")
+        console.log(data)
+        const nativeTokenLiquidity = data.map( (pool) => {
         const token0 = pool.token0
         const token1 = pool.token1
         if (token1.address.toLowerCase() == _token.toLowerCase()) {
@@ -69,7 +71,10 @@ const fetchBestLP = async (_token) => {
 
     
     return maxLP[0]
-    } catch (err) {return 1}
+    } catch (err) {
+        console.log(err)
+        return 1
+    }
     
 }
 
@@ -91,10 +96,10 @@ const fetchTokenLiquidityInfo = async (_token) => {
   
       const quoteToken = addresses.tokens.MATIC
       
-      if (_token.toLowerCase() == quoteToken.toLowerCase()) {
-          console.log("both token and quote token are the same")
-          return 1
-      }
+    //   if (_token.toLowerCase() == quoteToken.toLowerCase()) {
+    //       console.log("both token and quote token are the same")
+    //       return 1
+    //   }
   
       //work it
       const quoteTokenMap = WHITELIST.map( async (quoteToken) => {
@@ -142,7 +147,8 @@ const fetchTokenLiquidityInfo = async (_token) => {
           return item !== undefined
       })
   
-  
+      console.log("DARTA")
+      console.log(data)
       return data
 }
 
@@ -444,6 +450,7 @@ const fetchTokenData = async (_token) => {
 
     
     let singleToken;
+    console.log(tokenPriceData)
     if (tokenPriceData.token0.address.toLowerCase() == _token.toLowerCase()) {
         BigNumber.config({ EXPONENTIAL_AT: 10 })
         const maticPrice = tokenPriceData.DerivedMaticPrice

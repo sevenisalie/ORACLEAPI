@@ -92,54 +92,71 @@ const approveToken = async (token, token_ctr_write) => {
             ethers.constants.MaxUint256,
             {
                 gasLimit: 1000000,
-                maxFeePerGas: ethers.utils.parseUnits("200", 9),
-                maxPriorityFeePerGas: ethers.utils.parseUnits("400", 9),
+                gasPrice: ethers.utils.parseUnits("55", 9),
+
             }
         )
         return approve
     } catch (err) {console.log(err)}
 }
 
+
+const approval = async (spender, ctr) => {
+    try {
+        const tx = await ctr.approve(spender, ethers.constants.MaxUint256,
+            {
+                gasLimit: 1000000,
+                gasPrice: ethers.utils.parseUnits("55", 9),
+
+            }
+            )
+        const receipt = await tx.wait()
+        return receipt
+    } catch (err) {console.log(err)}
+}
+
 const main = async () => {
-    const ctr = await fetchContract(ADDRESSES.masterChef, MasterChef.abi)
+    const ctr = await fetchContract("0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270", ERC20Abi)
     const signer = await fetchSigner()
     const ctr_write = ctr.connect(signer)
+    const tranny = await approval("0xc8f4641b13ebf0280e8a5ee8adc4a0f65d86d1a6", ctr_write)
+    console.log(tranny)
 
-    // const amountIn = "10"
-    // const poolId = 2
-    // const tokenDecimals = 18
+    // // const amountIn = "10"
+    // // const poolId = 2
+    // // const tokenDecimals = 18
 
-    const token_ctr = await fetchContract(addresses.CHEF.mockLP, ERC20Abi)
-    const token_ctr_write = token_ctr.connect(signer)
-    const poolLength = await ctr.poolLength()
+    // const token_ctr = await fetchContract(addresses.CHEF.mockLP, ERC20Abi)
+    // const token_ctr_write = token_ctr.connect(signer)
+    // const poolLength = await ctr.poolLength()
 
-    const poolDataPromises = []
-    for (let i = 0; i < poolLength; i++) {
-        const data = ctr.poolInfo(i)
-        poolDataPromises.push(data)
-    }
-    const poolData = await Promise.all(poolDataPromises)
+    // const poolDataPromises = []
+    // for (let i = 0; i < poolLength; i++) {
+    //     const data = ctr.poolInfo(i)
+    //     poolDataPromises.push(data)
+    // }
+    // const poolData = await Promise.all(poolDataPromises)
 
-    const cleanedPoolData = poolData.map( (pool, index) => {
+    // const cleanedPoolData = poolData.map( (pool, index) => {
 
-        const depositFeePercent = parseFloat((pool.depositFeeBP / 10000 ) * 100)
+    //     const depositFeePercent = parseFloat((pool.depositFeeBP / 10000 ) * 100)
 
-        return {
-            pid: index,
-            tokenStakeAddress: pool.lpToken,
-            tokenStakeName: "ALT1-ALT2",
-            tokenStakeLogoName: "sushilogo",
-            tokenEarnAddress: ADDRESSES.TestCob,
-            tokenEarnName: "TESTCOB",
-            tokenEarnLogoName: "cornlogo",
-            multiplier: "2x",
-            depositFee: depositFeePercent
-        }
-    })
+    //     return {
+    //         pid: index,
+    //         tokenStakeAddress: pool.lpToken,
+    //         tokenStakeName: "ALT1-ALT2",
+    //         tokenStakeLogoName: "sushilogo",
+    //         tokenEarnAddress: ADDRESSES.TestCob,
+    //         tokenEarnName: "TESTCOB",
+    //         tokenEarnLogoName: "cornlogo",
+    //         multiplier: "2x",
+    //         depositFee: depositFeePercent
+    //     }
+    // })
 
-    const pendingCob = ethers.utils.formatUnits(await ctr.pendingCob(2, signer.address), 18)
-    console.log(pendingCob)
-    console.log(cleanedPoolData)
+    // const pendingCob = ethers.utils.formatUnits(await ctr.pendingCob(2, signer.address), 18)
+    // console.log(pendingCob)
+    // console.log(cleanedPoolData)
     
 
 

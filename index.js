@@ -76,7 +76,7 @@ app.listen(
     () => console.log(`SERVER RUNNING ON PORT ${PORT}`)
 )
 
-const task = cron.schedule('*/5 * * * *', async () => {
+const task = cron.schedule('*/1 * * * *', async () => {
   writeAllPoolData()
   console.log("ran task")
 });
