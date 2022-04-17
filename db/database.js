@@ -3,6 +3,7 @@ const axios = require("axios")
 mongoose.connect(`mongodb://localhost:27017/test`)
 
 
+
 const tickSchema = new mongoose.Schema({
     ts: {type: Number, required: true, unique: true},
     price: { type: Number, required: true },

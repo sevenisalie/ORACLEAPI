@@ -1,22 +1,25 @@
 {
   "137": {
-    "AAVEStrategy": [
-      "0xe92364f6F04416bdfbD7cdEd4a2F78e1bbF1b3C8"
+    "AAVEStrategyV2": [
+      "0x905eD8C3A3EF813490D2DAAdDf36E57a3AFC2D2F"
     ],
     "AccumulatorDistributorVault": [
-      "0xba1E89fdAB23f1097566f69F986dC0BFC49BF6CE"
+      "0x54819ec7F50250d8D2A05861265FD05f4c9C801E"
     ],
     "Controller": [
-      "0xfeD1424aF43D162B421EabB162d8678c46bD3E03"
+      "0x07f53502db0e721e47BE3F01d2B8aC3D86ED9B22"
     ],
     "LimitOrderVault": [
-      "0xC6b218f51dEC3ce84c961782246d0789327933A3"
+      "0xD7c32710Ff3d2Ea038f56DA7Fd019A157263F412"
     ],
-    "SimpleStrategy": [
-      "0xA541AC8CC374781f9D29b6E1d5a5F9C9b8256d9F"
+    "Resolver": [
+      "0x3dfcB8a33D0733A8b1222B178B163aa3F1F1091B"
+    ],
+    "SimpleStrategyV2": [
+      "0xF609fa22367268553F44cB4E9802c8Bb057D55F5"
     ],
     "StopLossVault": [
-      "0xA28566E92E524Acf840B71dDC15Ee8877896947d"
+      "0xF48b4223b968d33A951169B22B7a9B25A8FaCe09"
     ]
   }
 }

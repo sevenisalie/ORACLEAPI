@@ -26,21 +26,21 @@
     }
   ],
   "allSourcePaths": {
-    "27": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol"
+    "22": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol"
   },
   "ast": {
     "absolutePath": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol",
     "exportedSymbols": {
       "IERC1820Implementer": [
-        7097
+        8056
       ]
     },
-    "id": 7098,
+    "id": 8057,
     "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7085,
+        "id": 8044,
         "literals": [
           "solidity",
           "^",
@@ -48,7 +48,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:27"
+        "src": "0:23:22"
       },
       {
         "abstract": false,
@@ -56,15 +56,15 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 7086,
+          "id": 8045,
           "nodeType": "StructuredDocumentation",
-          "src": "25:264:27",
+          "src": "25:264:22",
           "text": " @dev Interface for an ERC1820 implementer, as defined in the\n https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n Used by contracts that will be registered as implementers in the\n {IERC1820Registry}."
         },
         "fullyImplemented": false,
-        "id": 7097,
+        "id": 8056,
         "linearizedBaseContracts": [
-          7097
+          8056
         ],
         "name": "IERC1820Implementer",
         "nodeType": "ContractDefinition",
@@ -72,13 +72,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 7087,
+              "id": 8046,
               "nodeType": "StructuredDocumentation",
-              "src": "326:200:27",
+              "src": "326:200:22",
               "text": " @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n implements `interfaceHash` for `account`.\n See {IERC1820Registry-setInterfaceImplementer}."
             },
             "functionSelector": "249cb3fa",
-            "id": 7096,
+            "id": 8055,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -86,18 +86,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 7092,
+              "id": 8051,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7089,
+                  "id": 8048,
                   "mutability": "mutable",
                   "name": "interfaceHash",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 7096,
-                  "src": "572:21:27",
+                  "scope": 8055,
+                  "src": "572:21:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -105,10 +105,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 7088,
+                    "id": 8047,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "572:7:27",
+                    "src": "572:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -119,13 +119,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 7091,
+                  "id": 8050,
                   "mutability": "mutable",
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 7096,
-                  "src": "595:15:27",
+                  "scope": 8055,
+                  "src": "595:15:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -133,10 +133,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7090,
+                    "id": 8049,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "595:7:27",
+                    "src": "595:7:22",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -147,21 +147,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "571:40:27"
+              "src": "571:40:22"
             },
             "returnParameters": {
-              "id": 7095,
+              "id": 8054,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7094,
+                  "id": 8053,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 7096,
-                  "src": "635:7:27",
+                  "scope": 8055,
+                  "src": "635:7:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -169,10 +169,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 7093,
+                    "id": 8052,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "635:7:27",
+                    "src": "635:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -182,20 +182,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "634:9:27"
+              "src": "634:9:22"
             },
-            "scope": 7097,
-            "src": "531:113:27",
+            "scope": 8056,
+            "src": "531:113:22",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 7098,
-        "src": "290:356:27"
+        "scope": 8057,
+        "src": "290:356:22"
       }
     ],
-    "src": "0:647:27"
+    "src": "0:647:22"
   },
   "bytecode": "",
   "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
