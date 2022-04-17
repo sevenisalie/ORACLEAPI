@@ -19,21 +19,21 @@
     }
   ],
   "allSourcePaths": {
-    "60": "contracts/openzeppelin/contracts/mocks/EtherReceiverMock.sol"
+    "55": "contracts/openzeppelin/contracts/mocks/EtherReceiverMock.sol"
   },
   "ast": {
     "absolutePath": "contracts/openzeppelin/contracts/mocks/EtherReceiverMock.sol",
     "exportedSymbols": {
       "EtherReceiverMock": [
-        9421
+        10380
       ]
     },
-    "id": 9422,
+    "id": 10381,
     "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9397,
+        "id": 10356,
         "literals": [
           "solidity",
           "^",
@@ -41,7 +41,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:60"
+        "src": "0:23:55"
       },
       {
         "abstract": false,
@@ -50,22 +50,22 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 9421,
+        "id": 10380,
         "linearizedBaseContracts": [
-          9421
+          10380
         ],
         "name": "EtherReceiverMock",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 9399,
+            "id": 10358,
             "mutability": "mutable",
             "name": "_acceptEther",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 9421,
-            "src": "58:25:60",
+            "scope": 10380,
+            "src": "58:25:55",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -73,10 +73,10 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 9398,
+              "id": 10357,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
-              "src": "58:4:60",
+              "src": "58:4:55",
               "typeDescriptions": {
                 "typeIdentifier": "t_bool",
                 "typeString": "bool"
@@ -87,26 +87,26 @@
           },
           {
             "body": {
-              "id": 9408,
+              "id": 10367,
               "nodeType": "Block",
-              "src": "139:43:60",
+              "src": "139:43:55",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9406,
+                    "id": 10365,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 9404,
+                      "id": 10363,
                       "name": "_acceptEther",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9399,
-                      "src": "149:12:60",
+                      "referencedDeclaration": 10358,
+                      "src": "149:12:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -116,32 +116,32 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 9405,
+                      "id": 10364,
                       "name": "acceptEther",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9401,
-                      "src": "164:11:60",
+                      "referencedDeclaration": 10360,
+                      "src": "164:11:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "149:26:60",
+                    "src": "149:26:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 9407,
+                  "id": 10366,
                   "nodeType": "ExpressionStatement",
-                  "src": "149:26:60"
+                  "src": "149:26:55"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "4fea120c",
-            "id": 9409,
+            "id": 10368,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -149,18 +149,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9402,
+              "id": 10361,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9401,
+                  "id": 10360,
                   "mutability": "mutable",
                   "name": "acceptEther",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9409,
-                  "src": "114:16:60",
+                  "scope": 10368,
+                  "src": "114:16:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -168,10 +168,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9400,
+                    "id": 10359,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "114:4:60",
+                    "src": "114:4:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -181,30 +181,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "113:18:60"
+              "src": "113:18:55"
             },
             "returnParameters": {
-              "id": 9403,
+              "id": 10362,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "139:0:60"
+              "src": "139:0:55"
             },
-            "scope": 9421,
-            "src": "90:92:60",
+            "scope": 10380,
+            "src": "90:92:55",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 9419,
+              "id": 10378,
               "nodeType": "Block",
-              "src": "216:68:60",
+              "src": "216:68:55",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 9413,
+                    "id": 10372,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -212,15 +212,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "!",
                     "prefix": true,
-                    "src": "230:13:60",
+                    "src": "230:13:55",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 9412,
+                      "id": 10371,
                       "name": "_acceptEther",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9399,
-                      "src": "231:12:60",
+                      "referencedDeclaration": 10358,
+                      "src": "231:12:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -232,13 +232,13 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 9418,
+                  "id": 10377,
                   "nodeType": "IfStatement",
-                  "src": "226:52:60",
+                  "src": "226:52:55",
                   "trueBody": {
-                    "id": 9417,
+                    "id": 10376,
                     "nodeType": "Block",
-                    "src": "245:33:60",
+                    "src": "245:33:55",
                     "statements": [
                       {
                         "expression": {
@@ -246,7 +246,7 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 9414,
+                            "id": 10373,
                             "name": "revert",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
@@ -254,13 +254,13 @@
                               -19
                             ],
                             "referencedDeclaration": -19,
-                            "src": "259:6:60",
+                            "src": "259:6:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_revert_pure$__$returns$__$",
                               "typeString": "function () pure"
                             }
                           },
-                          "id": 9415,
+                          "id": 10374,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -268,16 +268,16 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "259:8:60",
+                          "src": "259:8:55",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9416,
+                        "id": 10375,
                         "nodeType": "ExpressionStatement",
-                        "src": "259:8:60"
+                        "src": "259:8:55"
                       }
                     ]
                   }
@@ -285,7 +285,7 @@
               ]
             },
             "documentation": null,
-            "id": 9420,
+            "id": 10379,
             "implemented": true,
             "kind": "receive",
             "modifiers": [],
@@ -293,29 +293,29 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9410,
+              "id": 10369,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "196:2:60"
+              "src": "196:2:55"
             },
             "returnParameters": {
-              "id": 9411,
+              "id": 10370,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "216:0:60"
+              "src": "216:0:55"
             },
-            "scope": 9421,
-            "src": "188:96:60",
+            "scope": 10380,
+            "src": "188:96:55",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9422,
-        "src": "25:261:60"
+        "scope": 10381,
+        "src": "25:261:55"
       }
     ],
-    "src": "0:287:60"
+    "src": "0:287:55"
   },
   "bytecode": "6080604052348015600f57600080fd5b5060a38061001e6000396000f3fe608060405260043610601f5760003560e01c80634fea120c146038576033565b3660335760005460ff16603157600080fd5b005b600080fd5b348015604357600080fd5b50603160048036036020811015605857600080fd5b506000805460ff19169135151591909117905556fea2646970667358221220ae406edd49d7b928f4bb2bae7fba79265c61c59d7b7553b596724ed592c5e0d964736f6c634300060c0033",
   "bytecodeSha1": "726a2efe02c1de69664dce9502a425c52a010509",
@@ -330,7 +330,7 @@
   "contractName": "EtherReceiverMock",
   "coverageMap": {
     "branches": {
-      "60": {
+      "55": {
         "EtherReceiverMock.<receive>": {
           "2": [
             231,
@@ -341,7 +341,7 @@
       }
     },
     "statements": {
-      "60": {
+      "55": {
         "EtherReceiverMock.<receive>": {
           "0": [
             259,
@@ -359,7 +359,7 @@
   },
   "dependencies": [],
   "deployedBytecode": "608060405260043610601f5760003560e01c80634fea120c146038576033565b3660335760005460ff16603157600080fd5b005b600080fd5b348015604357600080fd5b50603160048036036020811015605857600080fd5b506000805460ff19169135151591909117905556fea2646970667358221220ae406edd49d7b928f4bb2bae7fba79265c61c59d7b7553b596724ed592c5e0d964736f6c634300060c0033",
-  "deployedSourceMap": "25:261:60:-:0;;;;;;;;;;;;;;;;;;;;;;;231:12;;;;226:52;;259:8;;;226:52;25:261;;;;;90:92;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;149:12:60;:26;;-1:-1:-1;;149:26:60;90:92;;;;149:26;;;;;;90:92::o",
+  "deployedSourceMap": "25:261:55:-:0;;;;;;;;;;;;;;;;;;;;;;;231:12;;;;226:52;;259:8;;;226:52;25:261;;;;;90:92;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;149:12:55;:26;;-1:-1:-1;;149:26:55;90:92;;;;149:26;;;;;;90:92::o",
   "language": "Solidity",
   "natspec": {
     "kind": "dev",
@@ -378,7 +378,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x80"
     },
     "2": {
@@ -388,7 +388,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x40"
     },
     "4": {
@@ -398,7 +398,7 @@
         286
       ],
       "op": "MSTORE",
-      "path": "60"
+      "path": "55"
     },
     "5": {
       "fn": null,
@@ -407,7 +407,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x4"
     },
     "7": {
@@ -417,7 +417,7 @@
         286
       ],
       "op": "CALLDATASIZE",
-      "path": "60"
+      "path": "55"
     },
     "8": {
       "fn": null,
@@ -426,7 +426,7 @@
         286
       ],
       "op": "LT",
-      "path": "60"
+      "path": "55"
     },
     "9": {
       "fn": null,
@@ -435,7 +435,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x1F"
     },
     "11": {
@@ -445,7 +445,7 @@
         286
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "12": {
       "fn": null,
@@ -454,7 +454,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x0"
     },
     "14": {
@@ -464,7 +464,7 @@
         286
       ],
       "op": "CALLDATALOAD",
-      "path": "60"
+      "path": "55"
     },
     "15": {
       "fn": null,
@@ -473,7 +473,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0xE0"
     },
     "17": {
@@ -483,7 +483,7 @@
         286
       ],
       "op": "SHR",
-      "path": "60"
+      "path": "55"
     },
     "18": {
       "fn": null,
@@ -492,7 +492,7 @@
         286
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "19": {
       "fn": null,
@@ -501,7 +501,7 @@
         286
       ],
       "op": "PUSH4",
-      "path": "60",
+      "path": "55",
       "value": "0x4FEA120C"
     },
     "24": {
@@ -511,7 +511,7 @@
         286
       ],
       "op": "EQ",
-      "path": "60"
+      "path": "55"
     },
     "25": {
       "fn": null,
@@ -520,7 +520,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x38"
     },
     "27": {
@@ -530,7 +530,7 @@
         286
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "28": {
       "fn": null,
@@ -539,7 +539,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x33"
     },
     "30": {
@@ -549,7 +549,7 @@
         286
       ],
       "op": "JUMP",
-      "path": "60"
+      "path": "55"
     },
     "31": {
       "fn": null,
@@ -558,7 +558,7 @@
         286
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "32": {
       "fn": null,
@@ -567,7 +567,7 @@
         286
       ],
       "op": "CALLDATASIZE",
-      "path": "60"
+      "path": "55"
     },
     "33": {
       "fn": null,
@@ -576,7 +576,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x33"
     },
     "35": {
@@ -586,7 +586,7 @@
         286
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "36": {
       "fn": "EtherReceiverMock.<receive>",
@@ -595,7 +595,7 @@
         243
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x0"
     },
     "38": {
@@ -605,7 +605,7 @@
         243
       ],
       "op": "SLOAD",
-      "path": "60"
+      "path": "55"
     },
     "39": {
       "fn": "EtherReceiverMock.<receive>",
@@ -614,7 +614,7 @@
         243
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0xFF"
     },
     "41": {
@@ -625,7 +625,7 @@
         243
       ],
       "op": "AND",
-      "path": "60"
+      "path": "55"
     },
     "42": {
       "fn": "EtherReceiverMock.<receive>",
@@ -634,7 +634,7 @@
         278
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x31"
     },
     "44": {
@@ -645,7 +645,7 @@
         278
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "45": {
       "fn": "EtherReceiverMock.<receive>",
@@ -654,7 +654,7 @@
         267
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "statement": 0,
       "value": "0x0"
     },
@@ -665,7 +665,7 @@
         267
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "48": {
       "fn": "EtherReceiverMock.<receive>",
@@ -674,7 +674,7 @@
         267
       ],
       "op": "REVERT",
-      "path": "60"
+      "path": "55"
     },
     "49": {
       "fn": "EtherReceiverMock.<receive>",
@@ -683,7 +683,7 @@
         278
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "50": {
       "offset": [
@@ -691,7 +691,7 @@
         286
       ],
       "op": "STOP",
-      "path": "60"
+      "path": "55"
     },
     "51": {
       "fn": "EtherReceiverMock.<receive>",
@@ -700,7 +700,7 @@
         286
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "52": {
       "fn": "EtherReceiverMock.<receive>",
@@ -709,7 +709,7 @@
         286
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x0"
     },
     "54": {
@@ -719,7 +719,7 @@
         286
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "55": {
       "first_revert": true,
@@ -729,7 +729,7 @@
         286
       ],
       "op": "REVERT",
-      "path": "60"
+      "path": "55"
     },
     "56": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -738,7 +738,7 @@
         182
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "57": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -747,7 +747,7 @@
         182
       ],
       "op": "CALLVALUE",
-      "path": "60"
+      "path": "55"
     },
     "58": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -756,7 +756,7 @@
         182
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "59": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -765,7 +765,7 @@
         182
       ],
       "op": "ISZERO",
-      "path": "60"
+      "path": "55"
     },
     "60": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -774,7 +774,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x43"
     },
     "62": {
@@ -784,7 +784,7 @@
         182
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "63": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -793,7 +793,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x0"
     },
     "65": {
@@ -803,7 +803,7 @@
         182
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "66": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -812,7 +812,7 @@
         182
       ],
       "op": "REVERT",
-      "path": "60"
+      "path": "55"
     },
     "67": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -821,7 +821,7 @@
         182
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "68": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -830,7 +830,7 @@
         182
       ],
       "op": "POP",
-      "path": "60"
+      "path": "55"
     },
     "69": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -839,7 +839,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x31"
     },
     "71": {
@@ -849,7 +849,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x4"
     },
     "73": {
@@ -859,7 +859,7 @@
         182
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "74": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -868,7 +868,7 @@
         182
       ],
       "op": "CALLDATASIZE",
-      "path": "60"
+      "path": "55"
     },
     "75": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -877,7 +877,7 @@
         182
       ],
       "op": "SUB",
-      "path": "60"
+      "path": "55"
     },
     "76": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -886,7 +886,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x20"
     },
     "78": {
@@ -896,7 +896,7 @@
         182
       ],
       "op": "DUP2",
-      "path": "60"
+      "path": "55"
     },
     "79": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -905,7 +905,7 @@
         182
       ],
       "op": "LT",
-      "path": "60"
+      "path": "55"
     },
     "80": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -914,7 +914,7 @@
         182
       ],
       "op": "ISZERO",
-      "path": "60"
+      "path": "55"
     },
     "81": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -923,7 +923,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x58"
     },
     "83": {
@@ -933,7 +933,7 @@
         182
       ],
       "op": "JUMPI",
-      "path": "60"
+      "path": "55"
     },
     "84": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -942,7 +942,7 @@
         182
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "value": "0x0"
     },
     "86": {
@@ -952,7 +952,7 @@
         182
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "87": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -961,7 +961,7 @@
         182
       ],
       "op": "REVERT",
-      "path": "60"
+      "path": "55"
     },
     "88": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -970,7 +970,7 @@
         182
       ],
       "op": "JUMPDEST",
-      "path": "60"
+      "path": "55"
     },
     "89": {
       "op": "POP"
@@ -982,7 +982,7 @@
         161
       ],
       "op": "PUSH1",
-      "path": "60",
+      "path": "55",
       "statement": 1,
       "value": "0x0"
     },
@@ -993,7 +993,7 @@
         175
       ],
       "op": "DUP1",
-      "path": "60"
+      "path": "55"
     },
     "93": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1002,7 +1002,7 @@
         175
       ],
       "op": "SLOAD",
-      "path": "60"
+      "path": "55"
     },
     "94": {
       "op": "PUSH1",
@@ -1018,7 +1018,7 @@
         175
       ],
       "op": "AND",
-      "path": "60"
+      "path": "55"
     },
     "98": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1027,7 +1027,7 @@
         182
       ],
       "op": "SWAP2",
-      "path": "60"
+      "path": "55"
     },
     "99": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1036,7 +1036,7 @@
         182
       ],
       "op": "CALLDATALOAD",
-      "path": "60"
+      "path": "55"
     },
     "100": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1045,7 +1045,7 @@
         182
       ],
       "op": "ISZERO",
-      "path": "60"
+      "path": "55"
     },
     "101": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1054,7 +1054,7 @@
         182
       ],
       "op": "ISZERO",
-      "path": "60"
+      "path": "55"
     },
     "102": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1063,7 +1063,7 @@
         175
       ],
       "op": "SWAP2",
-      "path": "60"
+      "path": "55"
     },
     "103": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1072,7 +1072,7 @@
         175
       ],
       "op": "SWAP1",
-      "path": "60"
+      "path": "55"
     },
     "104": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1081,7 +1081,7 @@
         175
       ],
       "op": "SWAP2",
-      "path": "60"
+      "path": "55"
     },
     "105": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1090,7 +1090,7 @@
         175
       ],
       "op": "OR",
-      "path": "60"
+      "path": "55"
     },
     "106": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1099,7 +1099,7 @@
         175
       ],
       "op": "SWAP1",
-      "path": "60"
+      "path": "55"
     },
     "107": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1108,7 +1108,7 @@
         175
       ],
       "op": "SSTORE",
-      "path": "60"
+      "path": "55"
     },
     "108": {
       "fn": "EtherReceiverMock.setAcceptEther",
@@ -1118,12 +1118,12 @@
         182
       ],
       "op": "JUMP",
-      "path": "60"
+      "path": "55"
     }
   },
   "sha1": "786ebc071736540a4f5d2ddb4d5367a087d5795f",
   "source": "pragma solidity ^0.6.0;\n\ncontract EtherReceiverMock {\n    bool private _acceptEther;\n\n    function setAcceptEther(bool acceptEther) public {\n        _acceptEther = acceptEther;\n    }\n\n    receive () external payable {\n        if (!_acceptEther) {\n            revert();\n        }\n    }\n}\n",
-  "sourceMap": "25:261:60:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourceMap": "25:261:55:-:0;;;;;;;;;;;;;;;;;;;",
   "sourcePath": "contracts/openzeppelin/contracts/mocks/EtherReceiverMock.sol",
   "type": "contract"
 }

@@ -5,7 +5,6 @@ const {ethers} = require("ethers")
 const axios = require("axios")
 const StopLossVault = require("../build/contracts/StopLossVault.json")
 const Controller = require("../build/contracts/Controller.json")
-const Settings = require("../build/contracts/Settings.json")
 const BigNumber = require("bignumber.js");
 
 require('dotenv').config()

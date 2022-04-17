@@ -4,7 +4,6 @@ const {addresses} = require("../utils/addresses.js")
 const {ethers} = require("ethers")
 const axios = require("axios")
 const Controller = require("../build/contracts/Controller.json")
-const Settings = require("../build/contracts/Settings.json")
 require('dotenv').config()
 const BigNumber = require("bignumber.js");
 const { ERC20Abi } = require("../utils/abi.js")

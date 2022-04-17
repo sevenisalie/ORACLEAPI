@@ -6,7 +6,6 @@ const {ethers} = require("ethers")
 const axios = require("axios")
 const StopLossVault = require("../build/contracts/StopLossVault.json")
 const Controller = require("../build/contracts/Controller.json")
-const Settings = require("../build/contracts/Settings.json")
 const BigNumber = require("bignumber.js");
 const { ERC20Abi, UniPairAbi, quickSwapFactoryAbi } = require("../utils/abi.js")
 const masterchef = require("../artifacts/contracts/MasterChefV2.sol/MasterChefV2.json")
@@ -486,6 +485,111 @@ const fetchAllPoolData = async () => {
     return data
 }
 
+const fetchLPData = async (_token) => {
+        const POOL = pools.filter( (pool) => {
+            return pool.tokenStakeAddress.toLowerCase() == _token.toLowerCase()
+        }) //imported from ../utils/pools
+
+        const _rewardTokenPerBlock = POOL[0].cobPerBlock
+        const pairctr = await fetchContract(_token, UniPairAbi)
+
+
+        const pairInfo = await pairctr.totalSupply()
+        const token0 = await pairctr.token0()
+        const token1 = await pairctr.token1()
+
+
+        const token0ctr = await fetchContract(token0, ERC20Abi)
+        const token1ctr = await fetchContract(token1, ERC20Abi)
+
+        const LPBalance0 = await token0ctr.balanceOf(_token)
+        const LPBalance1 = await token1ctr.balanceOf(_token)
+
+        const sym0 = await token0ctr.symbol()
+        const dec0 = await token0ctr.decimals()
+
+        const sym1 = await token1ctr.symbol()
+        const dec1 = await token1ctr.decimals()
+
+        const bestLP0 = await fetchBestLP(token0)
+        const bestLP1 = await fetchBestLP(token1)
+        const rawTVL = await pairctr.balanceOf(addresses.CHEF.masterChef)
+        const poolTotalStaked = ethers.utils.formatUnits(rawTVL, 18)
+
+
+
+        //incoming Math
+        const formattedLPB0 = ethers.utils.formatUnits(LPBalance0, dec0)
+        const formattedLPB1 = ethers.utils.formatUnits(LPBalance1, dec1)
+
+        
+        const totalSupply = ethers.utils.formatUnits(pairInfo, 18)
+   
+
+        //lpuseramounts
+        const d = new BigNumber(formattedLPB0)
+        const e = new BigNumber(formattedLPB1)
+  
+        //getmaticprices
+        const rawPrice0 = bestLP0 ? bestLP0.DerivedMaticPrice : 0
+        const rawPrice1 = bestLP1 ? bestLP1.DerivedMaticPrice : 0
+        const maticPrice0 = rawPrice0 == undefined ? 1 : rawPrice0
+        const maticPrice1 = rawPrice1 == undefined ? 1 : rawPrice1
+
+        const f = new BigNumber(maticPrice0)
+        const g = new BigNumber(maticPrice1)
+
+
+   
+        //pool tvl
+        const j = new BigNumber(poolTotalStaked)
+        const k = new BigNumber(totalSupply)
+        const poolLPRatio = j.dividedBy(k).toPrecision()
+
+        const l = new BigNumber(poolLPRatio)
+        const poolAmount0 = l.multipliedBy(d).toPrecision()
+        const poolAmount1 = l.multipliedBy(e).toPrecision()
+        const m = new BigNumber(poolAmount0)
+        const n = new BigNumber(poolAmount1)
+        const poolValue0 = f.multipliedBy(m).toPrecision()
+        const poolValue1 = g.multipliedBy(n).toPrecision()
+
+        const o = new BigNumber(poolValue0)
+        const p = new BigNumber(poolValue1)
+        const poolTVL = o.plus(p).toPrecision()
+
+        const APY = await getAPY(poolTVL, _rewardTokenPerBlock)
+
+
+        const data = {
+            POOL: {
+                poolStakedAmount: poolTotalStaked,
+                poolTVL: poolTVL,
+                APY: APY
+            },
+
+            LP: {
+                totalSupply: totalSupply,
+                token0: {
+                    balance: formattedLPB0,
+                    token: sym0,
+                    maticPrice0: maticPrice0,
+
+                },
+                token1: {
+                    balance: formattedLPB1,
+                    token: sym1,
+                    maticPrice1: maticPrice1,
+
+                }
+
+            }
+        }
+    
+    return data
+    
+}
+
 const fetchUserLPData = async (_token, _userAddress) => {
     const POOL = pools.filter( (pool) => {
         return pool.tokenStakeAddress.toLowerCase() == _token.toLowerCase()
@@ -580,7 +684,7 @@ const fetchUserLPData = async (_token, _userAddress) => {
         const data = {
             USER: {
                 poolStakedAmount: poolTotalStaked,
-                userStakedAmount: stakedAmount,
+                stakedAmount: stakedAmount,
                 allowance: allowance,
                 userLPRatio: userLPRatio,
                 userStakedValue: userStakedValue,

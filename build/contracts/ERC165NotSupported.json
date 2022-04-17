@@ -1,21 +1,21 @@
 {
   "abi": [],
   "allSourcePaths": {
-    "41": "contracts/openzeppelin/contracts/mocks/ERC165/ERC165NotSupported.sol"
+    "36": "contracts/openzeppelin/contracts/mocks/ERC165/ERC165NotSupported.sol"
   },
   "ast": {
     "absolutePath": "contracts/openzeppelin/contracts/mocks/ERC165/ERC165NotSupported.sol",
     "exportedSymbols": {
       "ERC165NotSupported": [
-        8085
+        9044
       ]
     },
-    "id": 8086,
+    "id": 9045,
     "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8084,
+        "id": 9043,
         "literals": [
           "solidity",
           "^",
@@ -23,7 +23,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:41"
+        "src": "0:23:36"
       },
       {
         "abstract": false,
@@ -32,18 +32,18 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 8085,
+        "id": 9044,
         "linearizedBaseContracts": [
-          8085
+          9044
         ],
         "name": "ERC165NotSupported",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 8086,
-        "src": "25:31:41"
+        "scope": 9045,
+        "src": "25:31:36"
       }
     ],
-    "src": "0:57:41"
+    "src": "0:57:36"
   },
   "bytecode": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220400557c8e8a6a39c7af064918610dc46028b5e3c7fce957bf9736c8d2e11d2c264736f6c634300060c0033",
   "bytecodeSha1": "73df0a6f5d0123eb2b2db0faf62b602aa77c123a",
@@ -58,15 +58,15 @@
   "contractName": "ERC165NotSupported",
   "coverageMap": {
     "branches": {
-      "41": {}
+      "36": {}
     },
     "statements": {
-      "41": {}
+      "36": {}
     }
   },
   "dependencies": [],
   "deployedBytecode": "6080604052600080fdfea2646970667358221220400557c8e8a6a39c7af064918610dc46028b5e3c7fce957bf9736c8d2e11d2c264736f6c634300060c0033",
-  "deployedSourceMap": "25:31:41:-:0;;;;;",
+  "deployedSourceMap": "25:31:36:-:0;;;;;",
   "language": "Solidity",
   "natspec": {
     "kind": "dev",
@@ -85,7 +85,7 @@
         56
       ],
       "op": "PUSH1",
-      "path": "41",
+      "path": "36",
       "value": "0x80"
     },
     "2": {
@@ -95,7 +95,7 @@
         56
       ],
       "op": "PUSH1",
-      "path": "41",
+      "path": "36",
       "value": "0x40"
     },
     "4": {
@@ -105,7 +105,7 @@
         56
       ],
       "op": "MSTORE",
-      "path": "41"
+      "path": "36"
     },
     "5": {
       "fn": null,
@@ -114,7 +114,7 @@
         56
       ],
       "op": "PUSH1",
-      "path": "41",
+      "path": "36",
       "value": "0x0"
     },
     "7": {
@@ -124,7 +124,7 @@
         56
       ],
       "op": "DUP1",
-      "path": "41"
+      "path": "36"
     },
     "8": {
       "fn": null,
@@ -133,12 +133,12 @@
         56
       ],
       "op": "REVERT",
-      "path": "41"
+      "path": "36"
     }
   },
   "sha1": "18f61808d73f92f70d3bc2521895ec845b14dd89",
   "source": "pragma solidity ^0.6.0;\n\ncontract ERC165NotSupported { }\n",
-  "sourceMap": "25:31:41:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourceMap": "25:31:36:-:0;;;;;;;;;;;;;;;;;;;",
   "sourcePath": "contracts/openzeppelin/contracts/mocks/ERC165/ERC165NotSupported.sol",
   "type": "contract"
 }
