@@ -4,8 +4,7 @@ const {addresses} = require("../utils/addresses.js")
 const {pools} = require("../utils/pools")
 const {ethers} = require("ethers")
 const axios = require("axios")
-const StopLossVault = require("../build/contracts/StopLossVault.json")
-const Controller = require("../build/contracts/Controller.json")
+
 const BigNumber = require("bignumber.js");
 const { ERC20Abi, UniPairAbi, quickSwapFactoryAbi } = require("../utils/abi.js")
 const masterchef = require("../artifacts/contracts/MasterChefV2.sol/MasterChefV2.json")
@@ -509,17 +508,18 @@ const fetchUserLPData = async (_token, _userAddress) => {
 
         const token0ctr = await fetchContract(token0, ERC20Abi)
         const token1ctr = await fetchContract(token1, ERC20Abi)
-
+        const token1Decimals = await token1ctr.decimals()
+        const token0Decimals = await token0ctr.decimals()
     
 
      
         const rawTVL = await pairctr.balanceOf(addresses.CHEF.masterChef)
-        const poolTotalStaked = ethers.utils.formatUnits(rawTVL, 18)
+        const poolTotalStaked = ethers.utils.formatUnits(rawTVL, 6)
 
 
 
    
-        const stakedAmount = ethers.utils.formatUnits(userInfo.amount, 18)
+        const stakedAmount = ethers.utils.formatUnits(userInfo.amount, 6)
         
         
      
@@ -542,6 +542,8 @@ const fetchUserTokenData = async (_token, _userAddress) => {
     const POOL = pools.filter( (pool) => {
         return pool.tokenStakeAddress.toLowerCase() == _token.toLowerCase()
     }) //imported from ../utils/pools
+    console.log("TARGET ACWUIRED")
+    console.log(POOL)
     let _poolId;
     let _rewardTokenPerBlock;
     if (POOL[0] !== undefined) {
@@ -555,7 +557,7 @@ const fetchUserTokenData = async (_token, _userAddress) => {
     // Act I the token
     const tokenctr = await fetchContract(_token, ERC20Abi)
 
-    const decimals = await tokenctr.decimals()
+    const decimals = POOL[0].decimals
     const totalSupply = await tokenctr.totalSupply()
     const formattedTotalSupply = ethers.utils.formatUnits(totalSupply, decimals)
     const rawTVL = await tokenctr.balanceOf(addresses.CHEF.masterChef)
@@ -570,7 +572,7 @@ const fetchUserTokenData = async (_token, _userAddress) => {
     const chefctr = await fetchContract(addresses.CHEF.masterChef, MasterchefAbi)
 
     const userInfo = await chefctr.userInfo(_poolId, _userAddress)
-    const stakedAmount = ethers.utils.formatUnits(userInfo.amount, decimals)
+    const _stakedAmount = ethers.utils.formatUnits(userInfo.amount, decimals)
     const allowances = await fetchAllowances(_userAddress)
 
     const allowance = allowances[_poolId]
@@ -595,9 +597,8 @@ const fetchUserTokenData = async (_token, _userAddress) => {
     const data = {
         USER: {
             poolStakedAmount: poolTotalStaked,
-            stakedAmount: stakedAmount,
+            stakedAmount: _stakedAmount,
             allowance: allowance,
-       
         }
       }
     
