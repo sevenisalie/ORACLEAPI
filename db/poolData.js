@@ -423,94 +423,104 @@ const fetchLPData = async (_token) => {
 }
 
 const fetchTokenData = async (_token) => {
-    const POOL = pools.filter( (pool) => {
-        return pool.tokenStakeAddress.toLowerCase() == _token.toLowerCase()
-    }) //imported from ../utils/pools
-    let _rewardTokenPerBlock;
-    let _poolId;
-    if (POOL[0] !== undefined) {
-        _poolId = POOL[0].pid
-        _rewardTokenPerBlock = POOL[0].cobPerBlock
-    } else {
-        _poolId = 1 //just return a ppol for calcs sake
-        _rewardTokenPerBlock = 0
+
+    
+
+    try {
+        const POOL = pools.filter( (pool) => {
+            return pool.tokenStakeAddress.toLowerCase() == _token.toLowerCase()
+        }) //imported from ../utils/pools
+        let _rewardTokenPerBlock;
+        let _poolId;
+        if (POOL[0] !== undefined) {
+            _poolId = POOL[0].pid
+            _rewardTokenPerBlock = POOL[0].cobPerBlock
+        } else {
+            _poolId = 1 //just return a ppol for calcs sake
+            _rewardTokenPerBlock = 0
+        }
+        
+        // Act I the token
+        const tokenctr = await fetchContract(_token, ERC20Abi)
+        const tokenPriceData = await fetchBestLP(_token)
+
+        const decimals = await tokenctr.decimals()
+        const symbol = await tokenctr.symbol()
+        const totalSupply = await tokenctr.totalSupply()
+        const formattedTotalSupply = ethers.utils.formatUnits(totalSupply, decimals)
+        const rawTVL = await tokenctr.balanceOf(addresses.CHEF.masterChef)
+        const poolTotalStaked = ethers.utils.formatUnits(rawTVL, decimals)
+
+
+
+        let singleToken;
+        console.log(tokenPriceData)
+        if (tokenPriceData.token0.address.toLowerCase() == _token.toLowerCase()) {
+            BigNumber.config({ EXPONENTIAL_AT: 10 })
+            const maticPrice = tokenPriceData.DerivedMaticPrice
+            const price = new BigNumber(maticPrice)
+            singleToken = {
+                address: tokenPriceData.token0.address,
+                symbol: tokenPriceData.token0.symbol,
+                decimals: tokenPriceData.token0.decimals,
+                derivedUsdPrice: price.toPrecision(),
+                totalSupply: formattedTotalSupply
+
+            }
+        } else if (tokenPriceData.token1.address.toLowerCase() == _token.toLowerCase()) {
+            BigNumber.config({ EXPONENTIAL_AT: 10 })
+            const maticPrice = tokenPriceData.DerivedMaticPrice
+            const price = new BigNumber(maticPrice)
+            singleToken = {
+                address: tokenPriceData.token1.address,
+                symbol: tokenPriceData.token1.symbol,
+                decimals: tokenPriceData.token1.decimals,
+                derivedUsdPrice: price.toPrecision(),
+                totalSupply: formattedTotalSupply
+            }
+        }
+
+        //act II masterchef cooks some nums
+
+        //incoming Math lolz
+        BigNumber.config({ EXPONENTIAL_AT: 10 })
+
+            //token ratio
+        const b = new BigNumber(formattedTotalSupply)
+
+            //token value
+        const d = new BigNumber(singleToken.derivedUsdPrice)
+
+
+            //pool TVL in Matic
+        const f = new BigNumber(poolTotalStaked)
+        const g = f.multipliedBy(d)
+        const _poolTVL = g.toPrecision()
+
+        const APY = await getAPY(_poolTVL, _rewardTokenPerBlock)
+
+
+
+        const data = {
+            POOL: {
+            pid: _poolId,
+            symbol: singleToken.symbol,
+            poolStakedAmount: poolTotalStaked,
+            poolTVL: _poolTVL,
+            APY: APY
+            },
+            Token: {
+            ...singleToken
+            }
+        }
+
+        return data 
+
+    } catch (err) {
+        console.log(err)
     }
     
-    // Act I the token
-    const tokenctr = await fetchContract(_token, ERC20Abi)
-    const tokenPriceData = await fetchBestLP(_token)
-
-    const decimals = await tokenctr.decimals()
-    const symbol = await tokenctr.symbol()
-    const totalSupply = await tokenctr.totalSupply()
-    const formattedTotalSupply = ethers.utils.formatUnits(totalSupply, decimals)
-    const rawTVL = await tokenctr.balanceOf(addresses.CHEF.masterChef)
-    const poolTotalStaked = ethers.utils.formatUnits(rawTVL, decimals)
-
-
     
-    let singleToken;
-    console.log(tokenPriceData)
-    if (tokenPriceData.token0.address.toLowerCase() == _token.toLowerCase()) {
-        BigNumber.config({ EXPONENTIAL_AT: 10 })
-        const maticPrice = tokenPriceData.DerivedMaticPrice
-        const price = new BigNumber(maticPrice)
-        singleToken = {
-            address: tokenPriceData.token0.address,
-            symbol: tokenPriceData.token0.symbol,
-            decimals: tokenPriceData.token0.decimals,
-            derivedUsdPrice: price.toPrecision(),
-            totalSupply: formattedTotalSupply
-
-        }
-    } else if (tokenPriceData.token1.address.toLowerCase() == _token.toLowerCase()) {
-        BigNumber.config({ EXPONENTIAL_AT: 10 })
-        const maticPrice = tokenPriceData.DerivedMaticPrice
-        const price = new BigNumber(maticPrice)
-        singleToken = {
-            address: tokenPriceData.token1.address,
-            symbol: tokenPriceData.token1.symbol,
-            decimals: tokenPriceData.token1.decimals,
-            derivedUsdPrice: price.toPrecision(),
-            totalSupply: formattedTotalSupply
-        }
-    }
-
-    //act II masterchef cooks some nums
-    
-    //incoming Math lolz
-    BigNumber.config({ EXPONENTIAL_AT: 10 })
-
-        //token ratio
-    const b = new BigNumber(formattedTotalSupply)
-
-        //token value
-    const d = new BigNumber(singleToken.derivedUsdPrice)
-  
-
-        //pool TVL in Matic
-    const f = new BigNumber(poolTotalStaked)
-    const g = f.multipliedBy(d)
-    const _poolTVL = g.toPrecision()
-
-    const APY = await getAPY(_poolTVL, _rewardTokenPerBlock)
-
-    
-
-    const data = {
-        POOL: {
-          pid: _poolId,
-          symbol: singleToken.symbol,
-          poolStakedAmount: poolTotalStaked,
-          poolTVL: _poolTVL,
-          APY: APY
-        },
-        Token: {
-          ...singleToken
-        }
-      }
-    
-    return data
 }
 
 const fetchAllPoolApyData = async () => {

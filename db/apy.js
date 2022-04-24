@@ -50,12 +50,15 @@ const createEntry = async (data) => {
 
 
 const writeAllPoolData = async () => {
-    const data = await fetchAllPoolApyData()
-    const justPoolData= data.map( (pool) => {
-        return pool.POOL
-    })
-    await createEntry(justPoolData)
-    console.log("created entry")
+    try {
+        const data = await fetchAllPoolApyData()
+        const justPoolData= data.map( (pool) => {
+            return pool.POOL
+        })
+        await createEntry(justPoolData)
+        console.log("created entry")
+    } catch (err) {console.log(err)}
+
 }
 
 const readLatestPoolData = async () => {
