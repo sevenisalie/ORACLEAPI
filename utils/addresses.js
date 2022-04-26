@@ -15,8 +15,8 @@ const addresses = {
     FACTORY: "0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32",
     ZERO_ADDRESS: "0x0000000000000000000000000000000000000000",
     CHEF: {
-        masterChef: "0xb4B14Aa0dfa22Cb3549de81E2657c6c026014090",
-        cobToken: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+        masterChef: "0x66e56a4Fdd5327D101cDE7513D522393dA9A719f",
+        cobToken: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         mockToken1: "0x7DBaFf79d13A0c842777742A86aE3aCAc9817250",
         mockToken2: "0xCCd1660797fe05dAe3439568aD39D2a4DacEab0e",
         mockLP: "0xea718C7dd15C6E1F98de3ED10f50d812e39E66D2",
@@ -41,7 +41,7 @@ const addresses = {
         MATIC: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
         MiMATIC: "0xa3Fa99A148fA48D14Ed51d610c367C61876997F1",
         DAI: "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
-        COB: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+        COB: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         DINO: "0xAa9654BECca45B5BDFA5ac646c939C62b527D394",
         LINK: "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39",
         SUSHI: "0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a",
@@ -54,7 +54,7 @@ const addresses = {
         SNX: "0x50b728d8d964fd00c2d0aad81718b71311fef68a",
         CRV: "0x172370d5cd63279efa6d502dab29171933a610af",
         lp: {
-            COBUSDC: "0x6a0ef6b58331ff3e6fdab1a8c0b24d664f31896a"
+            COBUSDC: "0x972575f78ee1738fc578289b1de98e0cd90c0119"
         },
     },
 }
