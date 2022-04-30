@@ -73,9 +73,6 @@ const poolDataRouter = router.get('/', async (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     try {
-        const test = await fetchAllPoolApyData()
-        console.log("JIMBO")
-        console.log(test)
         const data = await readLatestPoolData()
         res.json(data)
     } catch (err) {
