@@ -6,6 +6,11 @@ const StopLossVault = require("../build/contracts/StopLossVault.json")
 const Controller = require("../build/contracts/Controller.json")
 const TOKENLIST = require("../utils/TOKENLIST.json")
 const BigNumber = require("bignumber.js");
+const { Contract, Provider } = require('ethers-multicall');
+const MULTICALL = require("../build/contracts/Multicall.json")
+const {pools} = require("../utils/pools")
+const MASTERCHEF = require("../artifacts/contracts/MasterChefV2.sol/MasterChefV2.json")
+
 require('dotenv').config()
 
 // const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
@@ -596,12 +601,36 @@ const getBestSwapRate = async (_tokenA, _tokenB) => {
 
 }
 
+const mapCalls = async (address, abi, ) => {
+    const masterChef = new Contract(
+        addresses.CHEF.masterChef,
+        MASTERCHEF.abi
+    )
+
+    const pendingCalls = pools.map( pool => 
+        masterChef.pendingCob(pool.pid, "0x395977E98105A96328357f847Edc75333015b8f4")
+    )
+    return pendingCalls
+}
+
+const multiCalls = async (calls) => {
+    const callProvider = new Provider(provider, 137)
+    // await callProvider.init()
+
+    const results = await callProvider.all(calls)
+
+    const cleanedResults = results.map( (result) => {
+        return ethers.utils.formatUnits(result, 18)
+    })
+    return cleanedResults
+
+}
 
 const main = async () => {
    
 
-    const data = await getBestSwapRate(addresses.tokens.MATIC, addresses.tokens.USDC)
-
+    // const data = await getBestSwapRate(addresses.tokens.MATIC, addresses.tokens.USDC)
+    const data = await multiCalls()
     console.log(data)
     // const signer = await fetchSigner()
     // const cobctr = await fetchContract(addresses.tokens.COB, ERC20Abi)

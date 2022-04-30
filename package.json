@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "ethers": "^5.5.2",
+    "ethers-multicall": "https://github.com/Limited-Liability-Developers/ethers-multicall.git",
     "express": "^4.17.1",
     "mongoose": "^6.0.14",
     "node-cron": "^3.0.0"

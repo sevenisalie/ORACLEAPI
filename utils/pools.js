@@ -11,7 +11,7 @@ const pools = [
         tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
-        multiplier: "2x",
+        multiplier: "50x",
         depositFee: "0.1%"
   
     },
@@ -27,8 +27,8 @@ const pools = [
         tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
-        multiplier: "2x",
-        depositFee: "10%"
+        multiplier: "50x",
+        depositFee: "0.1%"
   
     },
     {   pid: 2,
@@ -42,8 +42,8 @@ const pools = [
         tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
-        multiplier: "2x",
-        depositFee: "10%"
+        multiplier: "50x",
+        depositFee: "0.1%"
   
     },
     {
@@ -58,8 +58,8 @@ const pools = [
         tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
-        multiplier: "2x",
-        depositFee: "10%"
+        multiplier: "50x",
+        depositFee: "0.1%"
     },
     {
       pid: 4,
@@ -73,8 +73,8 @@ const pools = [
       tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
       tokenEarnName: "COB",
       tokenEarnLogoName: "cornlogo",
-      multiplier: "2x",
-      depositFee: "10%"
+      multiplier: "50x",
+      depositFee: "0.1%"
   },
   {
     pid: 5,
@@ -88,26 +88,26 @@ const pools = [
     tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
-    multiplier: "2x",
-    depositFee: "10%"
+    multiplier: "50x",
+    depositFee: "0.1%"
   },
+//   {
+//   pid: 6,
+//   LP: false,
+//   tokenStakeAddress: "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
+//   decimals: 18,
+//   tokenStakeName: "CRV",
+//   tokenBaseAddress: "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
+//   poolurl: "https://info.quickswap.exchange/#/pair/0x6e7a5FAFcec6BB1e78bAE2A1F0B612012BF14827",
+//   imageurl: "https://polygonscan.com/token/images/curvefi-crv_32.png",
+//   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
+//   tokenEarnName: "COB",
+//   tokenEarnLogoName: "cornlogo",
+//   multiplier: "50x",
+//   depositFee: "0.1%"
+//   },
   {
   pid: 6,
-  LP: false,
-  tokenStakeAddress: "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
-  decimals: 18,
-  tokenStakeName: "CRV",
-  tokenBaseAddress: "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
-  poolurl: "https://info.quickswap.exchange/#/pair/0x6e7a5FAFcec6BB1e78bAE2A1F0B612012BF14827",
-  imageurl: "https://polygonscan.com/token/images/curvefi-crv_32.png",
-  tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
-  tokenEarnName: "COB",
-  tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
-  },
-  {
-  pid: 7,
   LP: false,
   tokenStakeAddress: "0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7",
   decimals: 18,
@@ -118,11 +118,11 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
+  multiplier: "50x",
+  depositFee: "0.1%"
   },
   {
-  pid: 8,
+  pid: 7,
   LP: false,
   tokenStakeAddress: "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
   decimals: 18,
@@ -133,11 +133,11 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
+  multiplier: "50x",
+  depositFee: "0.1%"
   },
   {
-  pid: 9,
+  pid: 8,
   LP: false,
   tokenStakeAddress: "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a",
   decimals: 18,
@@ -148,11 +148,11 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
+  multiplier: "50x",
+  depositFee: "0.1%"
   },
   {
-  pid: 10,
+  pid: 9,
   LP: false,
   tokenStakeAddress: "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
   decimals: 18,
@@ -163,11 +163,11 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
+  multiplier: "50x",
+  depositFee: "0.1%"
   },
   {
-  pid: 11,
+  pid: 10,
   LP: false,
   tokenStakeAddress: "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
   decimals: 18,
@@ -178,11 +178,11 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
+  multiplier: "50x",
+  depositFee: "0.1%"
   },
   {
-  pid: 12,
+  pid: 11,
   LP: false,
   tokenStakeAddress: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
   decimals: 18,
@@ -193,9 +193,54 @@ const pools = [
   tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
-  multiplier: "2x",
-  depositFee: "10%"
-  }
+  multiplier: "50x",
+  depositFee: "0.1%"
+  },
+  {
+    pid: 12,
+    LP: true,
+    tokenStakeAddress: "0x6A0eF6b58331Ff3e6fdAB1a8C0B24D664F31896a",
+    tokenStakeName: "COB-USDC",
+    tokenBaseAddress: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+    decimals: 18,
+    poolurl: "https://info.quickswap.exchange/#/pair/0xadbf1854e5883eb8aa7baf50705338739e558e5b",
+    imageurl: "https://lh3.googleusercontent.com/ZueKQhZj7fi76tVHBLupRSD6R9UGIwQwqo5ceE4i3ZaJenBM6KqhjRrfcLSewh4_Lo2CJOzK9QAnYYxfA6fLgbI9yfAUYVqv7xX6D4mC9PS2luPhseCSszF8MexirOfRbp0GQNn_nTn7ytDXOsMaLUqlj9tDoJ0CNYr5sTpdb3c7BvYNY6Z5O0fxt3Q3ZozKw45wjfBqIZiP1bVBMZ88VDbwt7zL5NpsQXu_sUHcFQvjCSN-iRnuzsoih11N9DtP1UskLztKJCP7OfeGJ7unvDk1kqPMdjA1ImbdLvSjAKypf4_Lyv5ZFlSztEqKSfDzXfzGGlR-3X52wHr2emho_jlGApDmwuiBiRH0SXEsOK_M3MjLMDaF0CVYWfGJ7g6uoVNEtNQJl_4pMtPFQEBHJenOir0jhOkVDF1FjwmigZhttlBUcUHJigcXXK1I50x1MP-25Sbnyju9x_Yy0Er2gJDYBSyYhGqVJ0ucyYlm77_TxBFaLutz4GVG6F9wKZ9EpRyUMRjrC_JytPfTRZoyjaszamfbAE1a550xMfPlFSxEz6WyP2dcYB_QwtmByeuCaMakOoSTlZEhQsCLKGxgcj7772txXz6voEOP1jANRHGntU3HGj-fKAq1e_OHnB-ll3Dyg7e1JFnvF6lhjHUaYU63HWcypwb96baoIzA-E5g7Ascb9yhxgRYLBIK-7J-jXMbY3kt8WJVmjDc39Kpg9YRjNAguNr2nvS-qco6vZemFO2UEbm--o_sIGo1G2uexHA6UTo3yLGvWYYHk4c1jQ8I7g6QiSYORjonUHAo8wjz_prHO4ynoU-epJTNbc1aVbR5oECWsI=s250-k-rw-no",
+    tokenEarnAddress: "0x78229c16A0913Da0CC2C33eEC7E76461d96269Fa",
+    tokenEarnName: "COB",
+    tokenEarnLogoName: "cornlogo",
+    multiplier: "100x",
+    depositFee: "0.1%"
+    },
+    {
+      pid: 13,
+      LP: false,
+      tokenStakeAddress: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+      tokenStakeName: "WRONGCOB",
+      tokenBaseAddress: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+      decimals: 18,
+      poolurl: "https://info.quickswap.exchange/#/pair/0xadbf1854e5883eb8aa7baf50705338739e558e5b",
+      imageurl: "https://lh3.googleusercontent.com/q6LIbH42WQ-aYZiMe2u7cACPF_sPVjSQIdHbIg0bA4eVh9TZV7bzH2HhFdSYmX0S-q-cLzA4H0JQic3RoxeMBYyf3UP_RcT4O5pxO2e4-4giGLgVGwcpmvvMY4Wcp9uflCcGSSB6cEA00nPCzUxJVA83hkoAFynBCriIPNYwf4VjCcBZDOvPdZ5FioTwK1-1fNlMMSUhddt_L-3kBLiy2pwt2C8RO1AGE1P5KVxcF_cmAU07CqNmB8i30r8V_-9ULyC38S_ia1FkUqHKPl5k1gi9IiVwOZ0FJKn3nqYPrcAoRx_5IC7h8Iq-rAqfFj1U21bQ72btzHLHnY3UtJWNSEDtdXSv6ft9TXSQx8cr2J7_IYCGJK7NxIOaviPCK-hoBQ_7yJmU8oP8yyIzF_hSlM3kp_CmZYFXDwAstXgyUPabgI5g3g5QCA39Qn12bTyxHW_UK42rkGLFM4LC50xcvmRgAJtN8NgGMSQ6UFoxWbonXns4nXTVg-K8xVkFAY88ULKUZoem8T5ulxHTVAE0f019geODWlPz5CwtVQOu2rXJlFu8jaqpmx3JXfx212txb1pYuB94rvMDzre0XdnIdkzWcusx1FaR8BAtft-K7UKO0NgA-ln34qbIwxAynHx7INLUPEiSsWaBBR3nNdA0zL_6oXyEUSX5_88oJNmRPkR---g6fPn9b2dvTX-0H3xjGdIWmrHm5CjVBHpEqjgJOccs7kdWK6KsX5fBeb-mLHZ7_oaYG3V0TYyzM-oALFHrWZdr-N6K83Q9Gsjy2TKp8D00WgbftEQNCBiWoN9kZIYiZ1mNAy3P-tYhqZGaciwvS3N0xUzw=s1292-no?authuser=2",
+      tokenEarnAddress: "0x78229c16A0913Da0CC2C33eEC7E76461d96269Fa",
+      tokenEarnName: "COB",
+      tokenEarnLogoName: "cornlogo",
+      multiplier: "100x",
+      depositFee: "0.1%"
+      },
+    {
+      pid: 14,
+      LP: false,
+      tokenStakeAddress: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+      tokenStakeName: "COB",
+      tokenBaseAddress: "0x648FA1E7Dd2722Ba93EC4Da99f2C32347522a37C",
+      decimals: 18,
+      poolurl: "https://info.quickswap.exchange/#/pair/0xadbf1854e5883eb8aa7baf50705338739e558e5b",
+      imageurl: "https://lh3.googleusercontent.com/q6LIbH42WQ-aYZiMe2u7cACPF_sPVjSQIdHbIg0bA4eVh9TZV7bzH2HhFdSYmX0S-q-cLzA4H0JQic3RoxeMBYyf3UP_RcT4O5pxO2e4-4giGLgVGwcpmvvMY4Wcp9uflCcGSSB6cEA00nPCzUxJVA83hkoAFynBCriIPNYwf4VjCcBZDOvPdZ5FioTwK1-1fNlMMSUhddt_L-3kBLiy2pwt2C8RO1AGE1P5KVxcF_cmAU07CqNmB8i30r8V_-9ULyC38S_ia1FkUqHKPl5k1gi9IiVwOZ0FJKn3nqYPrcAoRx_5IC7h8Iq-rAqfFj1U21bQ72btzHLHnY3UtJWNSEDtdXSv6ft9TXSQx8cr2J7_IYCGJK7NxIOaviPCK-hoBQ_7yJmU8oP8yyIzF_hSlM3kp_CmZYFXDwAstXgyUPabgI5g3g5QCA39Qn12bTyxHW_UK42rkGLFM4LC50xcvmRgAJtN8NgGMSQ6UFoxWbonXns4nXTVg-K8xVkFAY88ULKUZoem8T5ulxHTVAE0f019geODWlPz5CwtVQOu2rXJlFu8jaqpmx3JXfx212txb1pYuB94rvMDzre0XdnIdkzWcusx1FaR8BAtft-K7UKO0NgA-ln34qbIwxAynHx7INLUPEiSsWaBBR3nNdA0zL_6oXyEUSX5_88oJNmRPkR---g6fPn9b2dvTX-0H3xjGdIWmrHm5CjVBHpEqjgJOccs7kdWK6KsX5fBeb-mLHZ7_oaYG3V0TYyzM-oALFHrWZdr-N6K83Q9Gsjy2TKp8D00WgbftEQNCBiWoN9kZIYiZ1mNAy3P-tYhqZGaciwvS3N0xUzw=s1292-no?authuser=2",
+      tokenEarnAddress: "0x78229c16A0913Da0CC2C33eEC7E76461d96269Fa",
+      tokenEarnName: "COB",
+      tokenEarnLogoName: "cornlogo",
+      multiplier: "100x",
+      depositFee: "0.1%"
+      },
 ]
 
 module.exports = {
