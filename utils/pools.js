@@ -223,7 +223,7 @@ display: true,
 tokenEarnName: "COB",
 tokenEarnLogoName: "cornlogo",
 multiplier: "100x",
-depositFee: "0.1%"
+depositFee: "0%"
 },
 {
     pid: 14,
@@ -255,7 +255,7 @@ depositFee: "0.1%"
   tokenEarnName: "COB",
   tokenEarnLogoName: "cornlogo",
   multiplier: "100x",
-  depositFee: "0.1%"
+  depositFee: "0%"
   },
 ]
 
