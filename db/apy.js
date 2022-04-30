@@ -52,6 +52,7 @@ const createEntry = async (data) => {
 const writeAllPoolData = async () => {
     try {
         const data = await fetchAllPoolApyData()
+
         const justPoolData= data.map( (pool) => {
             return pool.POOL
         })
@@ -64,7 +65,6 @@ const writeAllPoolData = async () => {
 const readLatestPoolData = async () => {
 try {    
     let lastDoc = (await Pools.find({}).sort({_id: -1}).limit(1))[0];
-    console.log(lastDoc);
     return lastDoc
     } catch (err) {console.log(err)}
 }
@@ -73,6 +73,9 @@ const poolDataRouter = router.get('/', async (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     try {
+        const test = await fetchAllPoolApyData()
+        console.log("JIMBO")
+        console.log(test)
         const data = await readLatestPoolData()
         res.json(data)
     } catch (err) {

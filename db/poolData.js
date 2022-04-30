@@ -295,9 +295,25 @@ const getAPY = async (_poolTVL, _tokenPerBlock) => {
     const tokenPB = new BigNumber(_tokenPerBlock)
     const BPY = new BigNumber(15768000) //2s avg
 
-    const rewardPerYear = rewardPrice.multipliedBy(tokenPB).multipliedBy(BPY)
-    const APY = rewardPerYear.dividedBy(TVL).multipliedBy(100)
-    return APY.toPrecision()
+    const a = parseFloat(rwrd)
+    const b = parseFloat(_tokenPerBlock)
+    const c = parseFloat("1576800")
+    const d = parseFloat(_poolTVL)
+
+    // const rewardPerYear = rewardPrice.multipliedBy(tokenPB).multipliedBy(BPY)
+    // const APY = rewardPerYear.dividedBy(TVL).multipliedBy(100)
+
+    const rewardPerYear = a * b * c
+    const APY = (rewardPerYear / d) * 100
+    console.log("DALE")
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    console.log(rewardPerYear)
+    console.log(APY.toString())
+    console.log("GRIBBLE")
+    return APY.toString()
 }
 
 
