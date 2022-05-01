@@ -573,9 +573,13 @@ const fetchUserTokenData = async (_token, _userAddress) => {
 
     const userInfo = await chefctr.userInfo(_poolId, _userAddress)
     const _stakedAmount = ethers.utils.formatUnits(userInfo.amount, decimals)
-    const allowances = await fetchAllowances(_userAddress)
 
-    const allowance = allowances[_poolId]
+    console.log("GRAIL")
+    console.log(_stakedAmount)
+    console.log(userInfo)
+    console.log(_poolId)
+    console.log("DRIBBLE")
+
 
 
     //incoming Math lolz
@@ -598,7 +602,6 @@ const fetchUserTokenData = async (_token, _userAddress) => {
         USER: {
             poolStakedAmount: poolTotalStaked,
             stakedAmount: _stakedAmount,
-            allowance: allowance,
         }
       }
     
