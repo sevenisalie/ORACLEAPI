@@ -9,8 +9,6 @@ const URI = process.env.MONGODB_URI
 mongoose.connect(URI)
 
 const dataSchema  = new mongoose.Schema({
-    
-
     pid: {type: Number},
     symbol: {type: String},
     poolStakedAmount: {type: String},
@@ -37,7 +35,6 @@ const createEntry = async (data) => {
         const entry = new Pools(
             {
                 POOLS: data
-               
             }
         )
 
