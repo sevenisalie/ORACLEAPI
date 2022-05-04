@@ -30,20 +30,20 @@ app.use(function(req, res, next) {
 app.use(express.json())
 
 //route
-const priceOracleRoute = require("./routes/price.js")
-app.use('/price', priceOracleRoute)
+// const priceOracleRoute = require("./routes/price.js")
+// app.use('/price', priceOracleRoute)
 
-const limitRoute = require("./routes/limit.js")
-app.use("/limit", limitRoute)
+// const limitRoute = require("./routes/limit.js")
+// app.use("/limit", limitRoute)
 
-const stopRoute = require("./routes/stop.js")
-app.use("/stop", stopRoute)
+// const stopRoute = require("./routes/stop.js")
+// app.use("/stop", stopRoute)
 
-const accDistRoute = require("./routes/accdist.js")
-app.use("/accumulatordistributor", accDistRoute)
+// const accDistRoute = require("./routes/accdist.js")
+// app.use("/accumulatordistributor", accDistRoute)
 
-const chef = require("./routes/chef.js")
-app.use("/chef", chef)
+// const chef = require("./routes/chef.js")
+// app.use("/chef", chef)
 
 const chef2 = require("./routes/chef2.js")
 app.use("/chef2", chef2)
