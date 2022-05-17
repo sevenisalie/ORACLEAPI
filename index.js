@@ -54,8 +54,8 @@ app.use("/router", equityRouterRoute)
 const {poolDataRouter} = require("./db/apy.js")
 app.use("/poolData", poolDataRouter)
 
-const routerInfoRoute = require("./routes/routerInfo")
-app.use("/routerInfo", routerInfoRoute)
+// const routerInfoRoute = require("./routes/routerInfo")
+// app.use("/routerInfo", routerInfoRoute)
 
 
 
