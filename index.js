@@ -45,11 +45,13 @@ app.use(express.json())
 // const chef = require("./routes/chef.js")
 // app.use("/chef", chef)
 
+// const equityRouterRoute = require("./routes/equityRouter")
+// app.use("/router", equityRouterRoute)
+
 const chef2 = require("./routes/chef2.js")
 app.use("/chef2", chef2)
 
-const equityRouterRoute = require("./routes/equityRouter")
-app.use("/router", equityRouterRoute)
+
 
 const {poolDataRouter} = require("./db/apy.js")
 app.use("/poolData", poolDataRouter)
